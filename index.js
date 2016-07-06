@@ -9,3 +9,11 @@ utils2.hello();
 console.log("-------- require('./core') --------");
 var core = require('./core');
 core.hello();
+
+console.log("-------- require('./core.js') --------");
+try {
+  var core = require('./core.js');
+  core.hello();
+} catch (e) {
+  console.log(e.message);
+}
